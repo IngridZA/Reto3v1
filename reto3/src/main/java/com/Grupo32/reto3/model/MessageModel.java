@@ -24,11 +24,11 @@ public class MessageModel {
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_car",nullable = false)
-    @JsonIgnoreProperties({"message","reservation"})
+    @JsonIgnoreProperties({"messages","reservations"})
     private CarModel car;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_client",nullable = false)
-    @JsonIgnoreProperties({"message","reservation"})
+    @JsonIgnoreProperties({"messages","reservations"})
     private ClientModel client;
 }
